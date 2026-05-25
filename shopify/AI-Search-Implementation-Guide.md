@@ -24,7 +24,7 @@ The component is delivered as a single JavaScript file hosted on a CDN. You do n
 
 * Your three credentials (provided by your contact at LevelWorks):
 
-| Backend URL    e.g.  https://discoverai.levelworks.co API Key           e.g.  pk\_live\_abc123... Search Index   e.g.  All |
+| Backend URL    e.g.  https://discoverai.levelworks.co API Key             e.g.  pk\_live\_abc123...   Search Index   e.g.  All |
 | :---- |
 
 ## 
