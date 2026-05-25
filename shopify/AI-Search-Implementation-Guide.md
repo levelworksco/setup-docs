@@ -23,9 +23,9 @@ The component is delivered as a single JavaScript file hosted on a CDN. You do n
 * Access to your Shopify theme's code editor — Admin → Online Store → Themes → Edit code
 
 * Your three credentials (provided by your contact at LevelWorks):
-    -  Backend URL    e.g.  https://discoverai.levelworks.co 
+    -  Backend URL    e.g.   https://example.com  
     -  API Key             e.g.  pk\_live\_abc123...
-    -  Search Index   e.g.  All 
+    -  Search Index   e.g.  all 
 
 
 ## 
@@ -91,7 +91,7 @@ All visual properties of the button, container, and subtext can be controlled by
 | :---- | :---- |
 | search-base | Your backend URL. e.g. https://example.com |
 | search-key | Your API key. e.g. pk\_live\_abc123... |
-| search-index | Your search index name. e.g. All |
+| search-index | Your search index name. e.g. all |
 
 **Button appearance (optional: all css properties have a fallback)**
 
