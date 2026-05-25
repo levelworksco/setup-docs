@@ -14,7 +14,7 @@ The component is delivered as a single JavaScript file hosted on a CDN. You do n
 
 * Add one script tag to load the component from the CDN
 
-* Place the \<lw-ai-search\> element in your liquid file on shopify
+* Place the `\<lw-ai-search\>` element in your liquid file on shopify
 
 * Pass your credentials and styling preferences as HTML attributes
 
