@@ -89,7 +89,7 @@ All visual properties of the button, container, and subtext can be controlled by
 
 | Attribute | Description |
 | :---- | :---- |
-| search-base | Your backend URL. e.g. https://discoverai.levelworks.co |
+| search-base | Your backend URL. e.g. https://example.com |
 | search-key | Your API key. e.g. pk\_live\_abc123... |
 | search-index | Your search index name. e.g. All |
 
