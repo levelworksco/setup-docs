@@ -23,9 +23,10 @@ The component is delivered as a single JavaScript file hosted on a CDN. You do n
 * Access to your Shopify theme's code editor — Admin → Online Store → Themes → Edit code
 
 * Your three credentials (provided by your contact at LevelWorks):
+    -  Backend URL    e.g.  https://discoverai.levelworks.co 
+    -  API Key             e.g.  pk\_live\_abc123...
+    -  Search Index   e.g.  All 
 
-| Backend URL    e.g.  https://discoverai.levelworks.co API Key             e.g.  pk\_live\_abc123...   Search Index   e.g.  All |
-| :---- |
 
 ## 
 
@@ -56,12 +57,11 @@ You need to edit the section file that controls your blog listing page. To find 
 ## **Step 3 — Add the CDN Script Tag**
 
 At the very top of your blog section file, add this line to load the component:
-
+```
 \<script type="module"
-
   src="https://cdn.jsdelivr.net/gh/levelworksco/cdn@main/lw-ai-search/shopify/lw-ai-search.js"\>
-
 \</script\>
+```
 
 ℹ  *The type="module" attribute is required. Without it the component will not load.*
 
@@ -69,21 +69,17 @@ At the very top of your blog section file, add this line to load the component:
 
 Inside the same file, add the \<lw-ai-search\> element wherever you want the button to appear — typically in your sidebar. Replace the three credential values with your own:
 
+```
 \<lw-ai-search class="lw-ai-search"
-
   search-base="https://your-backend-url.com"
-
   search-key="your\_api\_key"
-
   search-index="All"
-
   btn-label="Search with AI"
-
   btn-subtext="Ask anything to find relevant blogs"
-
 \>\</lw-ai-search\>
+```
 
-The class="lw-ai-search" is optional but recommended — it lets you target the component with CSS later (see Step 6).
+The class="lw-ai-search",(or any other name you prefer) is optional but recommended — it lets you target the component with CSS later (see Step 6).
 
 ## **Step 5 — Configure the Button with HTML Attributes**
 
@@ -143,28 +139,19 @@ For any styling not covered by the attributes above, you can target elements ins
 
 Here is the HTML structure rendered by the component, showing each element's class and part name:
 
+```
 \<div class="ai-search-container"  part="ai-search-container"\>
-
   \<button class="ai-search-btn"    part="ai-search-btn"\>
-
     \<div class="inner-container"   part="inner-container"\>
-
       \<svg class="btn-icon"        part="btn-icon"\> ... \</svg\>
-
       Search with AI
-
     \</div\>
-
   \</button\>
-
   \<p class="ai-search-subtext"    part="ai-search-subtext"\>
-
     Ask anything to find relevant blogs
-
   \</p\>
-
 \</div\>
-
+```
 The following parts are exposed:
 
 | Part name | Element it targets |
@@ -176,31 +163,22 @@ The following parts are exposed:
 | btn-icon | The SVG sparkle icon inside the button |
 
 Example — add these to your custom-blog.css file:
-
+```
 .lw-ai-search::part(ai-search-btn) {
-
   background: \#000000;
-
   border-radius: 999px;
-
 }
 
 .lw-ai-search::part(ai-search-subtext) {
-
   text-decoration: underline;
-
   color: \#f58220;
-
 }
 
 .lw-ai-search::part(ai-search-container) {
-
   border: 1px solid \#eee;
-
   padding: 12px;
-
 }
-
+```
 ℹ  *The class="lw-ai-search" on the element (added in Step 4\) is what makes the .lw-ai-search selector work. Without it, the ::part() rules will not apply.*
 
 ## **Step 7 — Test It**
@@ -236,43 +214,29 @@ Example — add these to your custom-blog.css file:
 # **Full Example**
 
 This is a complete snippet showing all attributes. Paste it into your blog section file, replacing credential values with your own.
-
+```
 \<script type="module"
-
   src="https://cdn.jsdelivr.net/gh/levelworksco/cdn@main/lw-ai-search/shopify/lw-ai-search.js"\>
-
 \</script\>
+```
 
+```
 \<lw-ai-search class="lw-ai-search"
-
   search-base="https://discoverai.levelworks.co"
-
   search-key="pk\_live\_your\_key\_here"
-
   search-index="All"
-
   btn-label="Search with AI"
-
   btn-background="\#f58220"
-
   btn-color="\#ffffff"
-
   btn-width="220px"
-
   btn-border-radius="6px"
-
   btn-font-size="16px"
-
   btn-subtext="Ask anything to find relevant blogs"
-
   btn-subtext-color="\#777"
-
   container-width="220px"
-
   container-text-align="center"
-
 \>\</lw-ai-search\>
-
+```
 # **Troubleshooting**
 
 | Problem | Likely Cause | Fix |
